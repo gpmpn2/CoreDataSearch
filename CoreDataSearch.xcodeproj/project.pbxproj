@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		6083E06121642FE500CA3F85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083E06021642FE500CA3F85 /* AppDelegate.swift */; };
-		6083E06321642FE500CA3F85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083E06221642FE500CA3F85 /* ViewController.swift */; };
 		6083E06621642FE500CA3F85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6083E06421642FE500CA3F85 /* Main.storyboard */; };
 		6083E06921642FE500CA3F85 /* CoreDataSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6083E06721642FE500CA3F85 /* CoreDataSearch.xcdatamodeld */; };
 		6083E06B21642FE600CA3F85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6083E06A21642FE600CA3F85 /* Assets.xcassets */; };
 		6083E06E21642FE600CA3F85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6083E06C21642FE600CA3F85 /* LaunchScreen.storyboard */; };
 		6083E07921642FE600CA3F85 /* CoreDataSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083E07821642FE600CA3F85 /* CoreDataSearchTests.swift */; };
 		6083E08421642FE600CA3F85 /* CoreDataSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083E08321642FE600CA3F85 /* CoreDataSearchUITests.swift */; };
+		6083E0962164323700CA3F85 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083E0912164323700CA3F85 /* CustomTableViewCell.swift */; };
+		6083E0972164323700CA3F85 /* DocumentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083E0922164323700CA3F85 /* DocumentsTableViewController.swift */; };
+		6083E09A2164323700CA3F85 /* NotePadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083E0952164323700CA3F85 /* NotePadViewController.swift */; };
+		6083E0A1216436BC00CA3F85 /* Document+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083E09F216436BC00CA3F85 /* Document+CoreDataClass.swift */; };
+		6083E0A2216436BC00CA3F85 /* Document+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6083E0A0216436BC00CA3F85 /* Document+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +41,6 @@
 /* Begin PBXFileReference section */
 		6083E05D21642FE500CA3F85 /* CoreDataSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6083E06021642FE500CA3F85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6083E06221642FE500CA3F85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6083E06521642FE500CA3F85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6083E06821642FE500CA3F85 /* CoreDataSearch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataSearch.xcdatamodel; sourceTree = "<group>"; };
 		6083E06A21642FE600CA3F85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +52,11 @@
 		6083E07F21642FE600CA3F85 /* CoreDataSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6083E08321642FE600CA3F85 /* CoreDataSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSearchUITests.swift; sourceTree = "<group>"; };
 		6083E08521642FE600CA3F85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6083E0912164323700CA3F85 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		6083E0922164323700CA3F85 /* DocumentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsTableViewController.swift; sourceTree = "<group>"; };
+		6083E0952164323700CA3F85 /* NotePadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotePadViewController.swift; sourceTree = "<group>"; };
+		6083E09F216436BC00CA3F85 /* Document+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Document+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6083E0A0216436BC00CA3F85 /* Document+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Document+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +107,16 @@
 		6083E05F21642FE500CA3F85 /* CoreDataSearch */ = {
 			isa = PBXGroup;
 			children = (
+				6083E09F216436BC00CA3F85 /* Document+CoreDataClass.swift */,
+				6083E0A0216436BC00CA3F85 /* Document+CoreDataProperties.swift */,
 				6083E06021642FE500CA3F85 /* AppDelegate.swift */,
-				6083E06221642FE500CA3F85 /* ViewController.swift */,
 				6083E06421642FE500CA3F85 /* Main.storyboard */,
 				6083E06A21642FE600CA3F85 /* Assets.xcassets */,
 				6083E06C21642FE600CA3F85 /* LaunchScreen.storyboard */,
 				6083E06F21642FE600CA3F85 /* Info.plist */,
+				6083E0912164323700CA3F85 /* CustomTableViewCell.swift */,
+				6083E0922164323700CA3F85 /* DocumentsTableViewController.swift */,
+				6083E0952164323700CA3F85 /* NotePadViewController.swift */,
 				6083E06721642FE500CA3F85 /* CoreDataSearch.xcdatamodeld */,
 			);
 			path = CoreDataSearch;
@@ -259,8 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6083E06321642FE500CA3F85 /* ViewController.swift in Sources */,
+				6083E09A2164323700CA3F85 /* NotePadViewController.swift in Sources */,
 				6083E06121642FE500CA3F85 /* AppDelegate.swift in Sources */,
+				6083E0A2216436BC00CA3F85 /* Document+CoreDataProperties.swift in Sources */,
+				6083E0972164323700CA3F85 /* DocumentsTableViewController.swift in Sources */,
+				6083E0962164323700CA3F85 /* CustomTableViewCell.swift in Sources */,
+				6083E0A1216436BC00CA3F85 /* Document+CoreDataClass.swift in Sources */,
 				6083E06921642FE500CA3F85 /* CoreDataSearch.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
